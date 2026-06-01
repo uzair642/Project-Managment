@@ -15,7 +15,7 @@ node_modules/
 .idea/
 
 # Environment files (IMPORTANT if secrets/API keys)
-src/environments/*.ts
+# src/environments/*.ts
 
 # Logs
 npm-debug.log*
