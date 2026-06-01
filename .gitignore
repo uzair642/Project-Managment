@@ -2,10 +2,9 @@
 .angular/
 
 # Build output
-dist/
+# dist/
 out-tsc/
 
-dist/
 
 # Dependencies
 node_modules/
