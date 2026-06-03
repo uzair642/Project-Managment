@@ -106,3 +106,16 @@ html, body {
 .links a:hover {
   text-decoration: underline;
 }
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px 16px;
+    margin: 16px;
+    width: calc(100% - 32px);
+  }
+  .auth-header h1 {
+    font-size: 24px;
+  }
+}
+

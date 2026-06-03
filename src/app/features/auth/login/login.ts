@@ -129,4 +129,26 @@ export class Login {
       }
     }
   }
+
+  onOtpPaste(event: ClipboardEvent) {
+    event.preventDefault();
+    const pastedData = event.clipboardData?.getData('text');
+    if (!pastedData) return;
+    
+    const digits = pastedData.replace(/\D/g, '').substring(0, 6);
+    if (!digits) return;
+    
+    const otpValues: any = {};
+    for (let i = 0; i < digits.length; i++) {
+      otpValues[`otp${i}`] = digits[i];
+    }
+    
+    this.otpForm.patchValue(otpValues);
+    
+    const nextIndex = digits.length < 6 ? digits.length : 5;
+    const nextInput = document.getElementById(`otp-${nextIndex}`);
+    if (nextInput) {
+      nextInput.focus();
+    }
+  }
 }

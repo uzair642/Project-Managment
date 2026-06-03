@@ -13,7 +13,8 @@
       </mat-form-field>
     </div>
 
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 product-table">
+    <div class="table-responsive" style="overflow-x: auto;">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 product-table">
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
@@ -69,6 +70,7 @@
           No products found matching the filter "{{input.value}}"
         </td>
       </tr>
-    </table>
+      </table>
+    </div>
     
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of products" class="mat-elevation-z8" style="margin-top: 2px; border-radius: 0 0 8px 8px;"></mat-paginator>
